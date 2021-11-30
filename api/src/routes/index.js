@@ -9,8 +9,10 @@ const router = Router();
 // Ejemplo: router.use('/auth', authRouter);
 const ticketsRoute = require('./tickets')
 const typesRoute = require('./types')
+const mercadopagoRoute = require('./mercadopago')
 
 router.use('/tickets', ticketsRoute)
 router.use('/types', typesRoute)
+router.use('/mercadopago', mercadopagoRoute)
 
 module.exports = router;
