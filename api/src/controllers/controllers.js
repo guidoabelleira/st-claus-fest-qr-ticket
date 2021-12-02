@@ -1,4 +1,4 @@
-const {Ticket, Type} = require('../db');
+const { Ticket, Type } = require('../db');
 
 const getAllTickets = async () => {
     return await Ticket.findAll({
