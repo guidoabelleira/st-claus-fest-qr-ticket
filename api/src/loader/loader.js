@@ -1,6 +1,5 @@
-const { Type, Admin } = require('../db')
+const { Type } = require('../db')
 const types = require('../../types.json')
-const admin = require('../../admin.json')
 
 const loaderTypes = async () => {
     try {
@@ -25,22 +24,6 @@ const loaderTypes = async () => {
     }
 }
 
-const loaderAdmin = async () => {
-    try {
-        Admin.create({
-            name: admin.name,
-            email: admin.email,
-            isAdmin: admin.isAdmin,
-            password: admin.password,
-        })
-        console.log("Admin creado con éxito! 😁✨")
-    }
-    catch (error) {
-        console.log("Error en la carga del admin 😓😱")
-    }
-}
-
 module.exports = {
-    loaderTypes,
-    loaderAdmin
+    loaderTypes
 }
