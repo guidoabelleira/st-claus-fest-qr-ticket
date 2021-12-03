@@ -3,7 +3,7 @@ const {USER_MAIL, USER_PASS} = process.env;
 
 /// VAMOS A CAMBIAR DE POST A FUNCIONES. LUEGO UTILIZAR EN ROUTES.
 
-const confirmationMail = () => {
+const confirmationMail = (mail, name, lastname) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -14,20 +14,18 @@ const confirmationMail = () => {
 
   let mailOptions = {
     from: USER_MAIL,
-      to: req.body.user.email,
+      to: mail,
       subject: "Tu compra de entrada fue realizada con éxito!",
-      html: `<div>Hola. Compraste. Te esperamos en ST CLAUS</div>`
+      html: `<div>Hola, ${name} ${lastname}! Compraste. Te esperamos en ST CLAUS</div>`
   }
 
   transporter.sendMail(mailOptions, (err, data) => {
     if (err) {
-      res.send(err.message);
+      console.log(err.message);
     } else {
-      res.send('Mail enviado correctamente sin errores')
+      console.log('Mail enviado al comprador')
     }
   });
-
-  res.send('Mail enviado!')
 }
 
 module.exports = { confirmationMail }
