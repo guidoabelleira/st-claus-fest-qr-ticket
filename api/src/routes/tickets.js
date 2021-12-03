@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { getAllTickets } = require('../controllers/controllers')
 const { Ticket, Type } = require('../db'); // ???
+const {confirmationMail} = require('../controllers/nodemailer')
+const {USER_MAIL, USER_PASS} = process.env;
 
 //////////////////////////////// GET ////////////////////////////////
 
@@ -51,7 +53,7 @@ router.post('/', async (req, res, next) => {
             quantity,
             price
         });
-
+        confirmationMail(mail, name, lastname)
         res.status(200).send(newTicket)
     }
     catch (error) {
