@@ -6,10 +6,15 @@ module.exports = (sequelize) => {
   sequelize.define('ticket', {
     id: {
       type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
       allowNull: false
     },
-    fullName: {
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    lastname: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -19,6 +24,18 @@ module.exports = (sequelize) => {
     },
     mail: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    ticketType: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    quantity: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    price: {
+      type: DataTypes.INTEGER,                            // VER BIEN ESTO POR LAS DUDAS
       allowNull: false,
     },
     used: {
