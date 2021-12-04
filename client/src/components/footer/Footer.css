@@ -35,7 +35,7 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.linkedin, .github, .twitter {
+.instagram, .whatsapp {
     color: #ffffff;
     font-size: 35px;
     margin: 0 auto;
@@ -43,15 +43,16 @@
     border-bottom: 4px solid transparent;
 }
 
-.linkedin:hover, .github:hover, .twitter:hover {
-    border-color: blue;
+.instagram:hover, .whatsapp:hover {
+    border-color: #b06436;
     transition: all 0.3s ease-out;
 }
 
 .desing-by {
     font-size: 18px;
     padding-left: 50px;
-    color: #ffffff;
+    margin: 8px;
+    color: #b06436;
 }
 
 @media only screen and (max-width: 960px) {

@@ -12,11 +12,13 @@
     justify-content: center;
     width: 55%;
     padding: 0 100px 0 100px;
+    
 }
 
 .about-desc > h3 {
     margin-bottom: 30px;
     font-size: 28px;
+    color: #b06436;
 }
 
 .about-desc > p {

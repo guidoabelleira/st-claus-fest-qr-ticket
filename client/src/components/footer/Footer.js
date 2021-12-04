@@ -5,24 +5,25 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-contact">
-                <h3>Aca compra de tickets</h3>
-                <p>MercadoPago</p>
+                <h3>Puntos de</h3>
+                <p>micros</p>
             </div>
             <div className="footer-sns">
                 <div className="desing-by">
-                    Desing by Guido Abelleira & Lucas Ruiz - 2021
+                    Contacto
                 </div>
                 <div className="sns-links">
-                    <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-                        <i className="fab fa-linkedin linkedin"></i>
+                    <a href="https://www.instagram.com/stclaus.cordoba/" target="_blank" rel="noreferrer">
+                        <i className="fab fa-instagram instagram"></i>
                     </a>
-                    <a href="https://github.com/" target="_blank" rel="noreferrer">
-                        <i className="fab fa-github github"></i>
+                    <a href="https://api.whatsapp.com/send?phone=34123456789" target="_blank" rel="noreferrer">
+                        <i className="fab fa-whatsapp whatsapp"></i>
                     </a>
-                    <a href="https://twitter.com/" target="_blank" rel="noreferrer">
+                    {/* <a href="https://twitter.com/" target="_blank" rel="noreferrer">
                         <i className="fab fa-twitter twitter"></i>
-                    </a>
+                    </a> */}
                 </div>
+                
             </div>
             
         </footer>

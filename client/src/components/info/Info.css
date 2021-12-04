@@ -17,10 +17,31 @@
     margin-top: 50px;
 }
 
-.skills {
+.tiket {
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 5px;
 
+}
+
+.tiket-input {
+    margin: 4px;
+    color:#1d1d1b;
+}
+
+.tiket-bttn {
+    background-color: #b06436;
+    color:white;
+    width: 100px;
+    height: 35px; 
+    border:none;
+    border-radius: 25px; 
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+.tiket-bttn:hover{
+    background-color:rgb(166, 168, 166);
+    transition-duration: 0.5s;
 }
 
 @media only screen and (max-width: 960px) {
