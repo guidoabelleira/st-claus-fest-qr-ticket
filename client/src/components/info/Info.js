@@ -15,7 +15,7 @@ const Info = () => {
     });
 
     async function sendContact (input){
-        //Endpoint ---> http://localhost:3001/ruta_generador_tiket ?
+        //Endpoint ---> http://localhost:3001/mercadopago/ ?
     
         // Por BODY necesito:
         let body ={
@@ -28,7 +28,7 @@ const Info = () => {
                 dni: input.dni
             }
         }
-        let resEmail = await axios.post('ruta_generador_tiket', body)
+        let resEmail = await axios.post('mercadopago/', body)
         console.log(resEmail)
         console.log("soy body: ", body)
         return
