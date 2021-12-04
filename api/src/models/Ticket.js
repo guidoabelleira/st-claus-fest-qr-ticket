@@ -30,8 +30,8 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    quantity: {
-      type: DataTypes.INTEGER,
+    telephone: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     price: {
