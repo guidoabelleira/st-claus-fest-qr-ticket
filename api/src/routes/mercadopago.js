@@ -17,7 +17,7 @@ router.post("/", (req, res, next) => {
   let preference = {
     items: [],
     back_urls: {
-      success: "http://localhost:3000/order", // /home
+      success: "http://localhost:3000/", // /home
       failure: "http://localhost:3000/home",
       pendind: "http://localhost:3000/home",
     },
@@ -26,9 +26,9 @@ router.post("/", (req, res, next) => {
 
   const addPreference = products.forEach((el) => {
     preference.items.push({
-      title: el.name,
+      title: `ST CLAUS - ${el.ticketType}`,
       unit_price: parseInt(el.price),
-      quantity: parseInt(el.count)
+      quantity: 1
     })
   })
 
