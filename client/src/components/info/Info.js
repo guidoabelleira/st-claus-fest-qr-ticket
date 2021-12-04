@@ -28,8 +28,16 @@ const Info = () => {
                 dni: input.dni
             }
         }
-        let resEmail = await axios.post('mercadopago/', body)
-        console.log(resEmail)
+
+
+        let bodyMercadoPago = {
+            title: input.ticketType,
+            unit_price: 1500,
+            quantity: 1
+        }
+        let mercadoPagoRes = await axios.post('mercadopago/', bodyMercadoPago)
+        console.log(mercadoPagoRes)
+        window.open(mercadoPagoRes.data, '_blank')
         console.log("soy body: ", body)
         return
     };
