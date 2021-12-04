@@ -94,6 +94,17 @@ const Info = () => {
                     </p>
                     <p>
                         <input 
+                            type="number"
+                            name="dni" 
+                            placeholder="DNI *" 
+                            required
+                            onChange={handleInputChange}
+                            value={input.dni} 
+                            className="tiket-input"
+                            />
+                    </p>
+                    <p>
+                        <input 
                             type="email" 
                             name="email" 
                             placeholder="Email *"
@@ -121,17 +132,7 @@ const Info = () => {
                             <option value="type2">type2 $3000</option>
                         </select>
                     </p>
-                    <p>
-                        <input 
-                            type="number"
-                            name="dni" 
-                            placeholder="DNI *" 
-                            required
-                            onChange={handleInputChange}
-                            value={input.dni} 
-                            className="tiket-input"
-                            />
-                    </p>
+
 
                     <button className="tiket-bttn"type='submit'><p>Enviar</p></button>
                     
