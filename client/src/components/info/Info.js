@@ -33,11 +33,11 @@ const Info = () => {
         let bodyMercadoPago = {
             title: input.ticketType,
             unit_price: 1500,
-            quantity: 1
+
         }
         let mercadoPagoRes = await axios.post('mercadopago/', bodyMercadoPago)
         console.log(mercadoPagoRes)
-        window.open(mercadoPagoRes.data, '_blank')
+        window.open(mercadoPagoRes.data, '_parent')
         console.log("soy body: ", body)
         return
     };
@@ -46,7 +46,7 @@ const Info = () => {
         e.preventDefault();
         // dispatch a ruta de back
         sendContact(input);
-        alert("Tiket generado!!! Revise su casilla de mail...")
+        alert("Terminá tu compra en Mercado Pago y esperá a ser redirigido!")
         setInput({
             name: "",
             lastname: "",
@@ -74,7 +74,7 @@ const Info = () => {
     return (
         <div className="info-container">
             <div className="info">
-                <h1>Adquiri tu entrada: </h1>
+                <h1>Adquirí tu entrada: </h1>
             </div>
             <div className="tiket">
                 <form onSubmit={handleSubmit}>
@@ -142,7 +142,7 @@ const Info = () => {
                     </p>
 
 
-                    <button className="tiket-bttn"type='submit'><p>Enviar</p></button>
+                    <button className="tiket-bttn"type='submit'><p>Comprar</p></button>
                     
                 </form>
             </div>
