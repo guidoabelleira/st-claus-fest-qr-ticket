@@ -24,13 +24,11 @@ router.post("/", (req, res, next) => {
     auto_return: "all",
   };
 
-  const addPreference = products.forEach((el) => {
-    preference.items.push({
-      title: `ST CLAUS - ${el.ticketType}`,
-      unit_price: parseInt(el.price),
+  const addPreference = preference.items.push({
+      title: `ST CLAUS - ${products.title}`,
+      unit_price: parseInt(products.unit_price),
       quantity: 1
     })
-  })
 
   mercadopago.preferences.create(preference)
     .then(addPreference)
