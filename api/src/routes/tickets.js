@@ -11,6 +11,7 @@ router.get("/", async (req, res, next) => {
             next(error);
         }
 });
+
 router.get('/:id', getOneTicket)
 
 router.post('/', createTicket)
