@@ -1,5 +1,6 @@
 const { Ticket } = require('../db');
 const { confirmationMail } = require('./nodemailer')
+const { runQR } = require('./qr')
 
 //////////////////////////////// GET ////////////////////////////////
 
@@ -45,6 +46,7 @@ const createTicket = async (req, res, next) => {
             price
         });
         confirmationMail(mail, name, lastname)
+        await runQR(newTicket)
         res.status(200).send(newTicket)
     }
     catch (error) {
