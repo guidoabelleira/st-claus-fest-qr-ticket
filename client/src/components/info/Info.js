@@ -1,151 +1,78 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+
+import { useModal } from "../../hooks/useModal";
+import Modal from "./Modal";
 
 import "./Info.css";
+import Form from './Form';
 
 const Info = () => {
-    
-    const [input, setInput] = useState({
-        name: "",
-        lastname: "",
-        email: "", 
-        telephone: "",
-        ticketType: "",
-        dni: "",
-    });
+    const [isOpenModal1, openModal1, closeModal1] = useModal(false);
+    const [isOpenModal2, openModal2, closeModal2] = useModal(false);
+    const [isOpenModal3, openModal3, closeModal3] = useModal(false);
+    const [isOpenModal4, openModal4, closeModal4] = useModal(false);
+    const [isOpenModal5, openModal5, closeModal5] = useModal(false);
 
-    async function sendContact (input){
-        //Endpoint ---> http://localhost:3001/mercadopago/ ?
-    
-        // Por BODY necesito:
-        let body ={
-            user:{
-                name: input.name,
-                lastname: input.lastname,
-                email: input.email,
-                telephone: input.telephone,
-                ticketType: input.ticketType,
-                dni: input.dni
-            }
-        }
-
-
-        let bodyMercadoPago = {
-            title: input.ticketType,
-            unit_price: 1500,
-            quantity: 1
-        }
-        let mercadoPagoRes = await axios.post('mercadopago/', bodyMercadoPago)
-        console.log(mercadoPagoRes)
-        window.open(mercadoPagoRes.data, '_blank')
-        console.log("soy body: ", body)
-        return
-    };
-
-    function handleSubmit(e){
-        e.preventDefault();
-        // dispatch a ruta de back
-        sendContact(input);
-        alert("Tiket generado!!! Revise su casilla de mail...")
-        setInput({
-            name: "",
-            lastname: "",
-            email: "", 
-            telephone: "",
-            ticketType: "",
-            dni: "",
-        })
+    const type1 = {
+        ticketType: "general",
+        unit_price: 1500
     }
-
-    function handleInputChange(e) {
-        setInput({
-            ...input,
-            [e.target.name]: e.target.value})
-    }
-
-    function handleSelectChange(e) {
-        setInput({
-            ...input,
-            ticketType: e.target.value
-        })
-    }
-    
     
     return (
         <div className="info-container">
-            <div className="info">
-                <h1>Adquiri tu entrada: </h1>
+            <div>
+                <h3>Ticket General</h3>
+                <p>+ mas info</p>
+                <button onClick={openModal1}>Modal 1</button>
+                <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
+                    <Form type={type1}/>
+                </Modal>
             </div>
-            <div className="tiket">
-                <form onSubmit={handleSubmit}>
-                    <p>
-                        <input 
-                            type="text" 
-                            name="name" 
-                            placeholder="Nombre *" 
-                            required
-                            onChange={handleInputChange}
-                            value={input.name} 
-                            className="tiket-input"
-                        />
-                    </p>
-                    <p>
-                        <input 
-                            type="text" 
-                            name="lastname" 
-                            placeholder="Apellido *" 
-                            required
-                            onChange={handleInputChange}
-                            value={input.lastname} 
-                            className="tiket-input"
-                        />
-                    </p>
-                    <p>
-                        <input 
-                            type="number"
-                            name="dni" 
-                            placeholder="DNI *" 
-                            required
-                            onChange={handleInputChange}
-                            value={input.dni} 
-                            className="tiket-input"
-                            />
-                    </p>
-                    <p>
-                        <input 
-                            type="email" 
-                            name="email" 
-                            placeholder="Email *"
-                            required
-                            onChange={handleInputChange}
-                            value={input.email} 
-                            className="tiket-input"
-                            />
-                    </p>
-                    <p>
-                        <input 
-                            type="tel" 
-                            name="telephone" 
-                            placeholder="Número de teléfono *" 
-                            required
-                            onChange={handleInputChange}
-                            value={input.telephone}
-                            className="tiket-input"
-                            />
-                    </p>
-                    <p>
-                        <select value={input.ticketType} onChange={handleSelectChange}>
-                            <option defaultValue={false} selected >Entrada:</option>
-                            <option value="type1" >type1 $1500</option>
-                            <option value="type2">type2 $3000</option>
-                        </select>
-                    </p>
 
-
-                    <button className="tiket-bttn"type='submit'><p>Enviar</p></button>
-                    
-                </form>
+            <div>
+                <h3>Ticket Vip +25</h3>
+                <p>+ mas info</p>
+                <button onClick={openModal2}>Modal 2</button>
+                <Modal isOpen={isOpenModal2} closeModal={closeModal2}>
+                    <h3>Modal 1</h3>
+                    <p>Hola este es el contenido modal 1</p>
+                    <img src="https://placeimg.com/400/400/animals" alt="no animals"></img>
+                </Modal>
             </div>
+
+            <div>
+                <h3>Ticket Vip +30 exclusivo</h3>
+                <p>+ mas info</p>
+                <button onClick={openModal3}>Modal 3</button>
+                <Modal isOpen={isOpenModal3} closeModal={closeModal3}>
+                    <h3>Modal 1</h3>
+                    <p>Hola este es el contenido modal 1</p>
+                    <img src="https://placeimg.com/400/400/animals" alt="no animals"></img>
+                </Modal>
+            </div>
+
+            <div>
+                <h3>Mesa Vip +25</h3>
+                <p>+ mas info</p>
+                <button onClick={openModal4}>Modal 4</button>
+                <Modal isOpen={isOpenModal4} closeModal={closeModal4}>
+                    <h3>Modal 1</h3>
+                    <p>Hola este es el contenido modal 1</p>
+                    <img src="https://placeimg.com/400/400/animals" alt="no animals"></img>
+                </Modal>
+            </div>
+
+            <div>
+                <h3>Mesa Vip +30</h3>
+                <p>+ mas info</p>
+                <button onClick={openModal5}>Modal 5</button>
+                <Modal isOpen={isOpenModal5} closeModal={closeModal5}>
+                    <h3>Modal 1</h3>
+                    <p>Hola este es el contenido modal 1</p>
+                    <img src="https://placeimg.com/400/400/animals" alt="no animals"></img>
+                </Modal>
+            </div>
+            
         </div>
     )
 }
