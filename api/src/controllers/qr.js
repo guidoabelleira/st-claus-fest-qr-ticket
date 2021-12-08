@@ -3,22 +3,37 @@ const qrcode = require('qrcode');
 
 const urlBase = 'http://localhost:3000/entradas/'
 
-/* const tickets = [
-    {id: 1}, {id: 2}, {id: 15}
-] */
-
-const run = async (ticket) => {
-        const QR = await qrcode.toDataURL(urlBase + ticket);
-        const htmlContent = `<div> <p>Hola Guidoneta</p>
-        <img src="${QR}"> </img>
-        </div>`
-        fs.writeFileSync('./index.html', `${htmlContent}`)
+const runQR = async (newTicket) => {
+    const QR = await qrcode.toDataURL(urlBase + newTicket.id);
+    const htmlContent = `<!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js'></script>
+        <script src="script.js"></script>
+    </head>
+    
+    <body>
+        <div id='body'>
+            <p>Hola ${newTicket.name} ${newTicket.lastname}</p>
+            <p></p>
+            <p>Este es el ticket ${newTicket.id}</p>
+            <hr>
+            </hr>
+            <img src="${QR}"> </img>
+        </div>
+        <button onclick="generatePDF()">Descargar entrada</button>
+    </body>
+    
+    </html>`
+    fs.writeFileSync('./entrada.html', `${htmlContent}`)
+    console.log('Creando QR')
 }
 
-/* const generateQR = async (ticket) => {
-    try {
-
-    }
-} */
-
-run("90cd12b9-f92f-458e-8d3b-c65322d30de9");
+module.exports = {
+    runQR
+}

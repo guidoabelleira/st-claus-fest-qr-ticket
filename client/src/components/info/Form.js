@@ -44,7 +44,7 @@ const Form = ({type}) => {
         e.preventDefault();
         // dispatch a ruta de back
         sendContact(input);
-        alert("Tiket generado!!! Revise su casilla de mail...")
+        alert("Terminá tu compra en Mercado Pago y esperá a ser redirigido!")
         setInput({
             name: "",
             lastname: "",
