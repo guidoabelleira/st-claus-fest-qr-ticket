@@ -19,7 +19,7 @@ const Form = ({type}) => {
         let bodyTicket ={
                 name: input.name,
                 lastname: input.lastname,
-                email: input.email,
+                mail: input.email,
                 telephone: input.telephone,
                 ticketType: type.ticketType,
                 dni: input.dni,
