@@ -5,7 +5,7 @@ const About = () => {
     return (
         <div className="about-container">
             <div className="about-desc">
-                <h3>Reserva <h3>Natural Norte</h3></h3>
+                <h3>Reserva Natural Norte</h3>
                 <p>Av. Juan B. Justo 8000, Córdoba Capital</p>
             </div> 
             <div className="about-img">

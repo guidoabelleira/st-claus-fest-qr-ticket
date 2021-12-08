@@ -16,17 +16,18 @@ const Form = ({type}) => {
         //Endpoint ---> http://localhost:3001/mercadopago/ ?
     
         // Por BODY necesito:
-        let body ={
-            user:{
+        let bodyTicket ={
                 name: input.name,
                 lastname: input.lastname,
                 email: input.email,
                 telephone: input.telephone,
                 ticketType: type.ticketType,
-                dni: input.dni
-            }
+                dni: input.dni,
+                price: type.unit_price
         }
-
+        console.log(bodyTicket)
+        let resNewTicket = await axios.post('tickets/', bodyTicket);
+        console.log("resNewTicket", resNewTicket )
 
         let bodyMercadoPago = {
             title: input.ticketType,
@@ -34,9 +35,8 @@ const Form = ({type}) => {
             quantity: 1
         }
         let mercadoPagoRes = await axios.post('mercadopago/', bodyMercadoPago)
-        console.log(mercadoPagoRes)
+        // console.log(mercadoPagoRes)
         window.open(mercadoPagoRes.data, '_blank')
-        console.log("soy body: ", body)
         return
     };
 
