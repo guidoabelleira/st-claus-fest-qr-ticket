@@ -3,7 +3,7 @@
     background-color: #ffffff;
     color: #1d1d1b;
     height: 70vh;
-    padding: 100px 0 100px 0;
+    padding: 100px 0 90px 0;
 }
 
 .about-desc {
@@ -27,7 +27,7 @@
 
 .about-img {
     width: 45%;
-    height: 60vh;
+    height: 50vh;
     display: flex;
     align-self: center;
     overflow: hidden;

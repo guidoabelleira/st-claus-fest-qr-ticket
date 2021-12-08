@@ -28,7 +28,7 @@ const Info = () => {
     
     return (
         <div className="info-container">
-            <div>
+            <div className="info-tickets">
                 <h3>Ticket General</h3>
                 <p>+ mas info</p>
                 <button className="tiket-bttn" onClick={openModal1}>COMPRAR</button>
@@ -37,7 +37,7 @@ const Info = () => {
                 </Modal>
             </div>
 
-            <div>
+            <div className="info-tickets">
                 <h3>Ticket Vip +25</h3>
                 <p>+ mas info</p>
                 <button className="tiket-bttn" onClick={openModal2}>COMPRAR</button>
@@ -46,7 +46,7 @@ const Info = () => {
                 </Modal>
             </div>
 
-            <div>
+            <div className="info-tickets">
                 <h3>Ticket Vip +30 exclusivo</h3>
                 <p>+ mas info</p>
                 <button className="tiket-bttn" onClick={openModal3}>COMPRAR</button>
@@ -55,7 +55,7 @@ const Info = () => {
                 </Modal>
             </div>
 
-            <div>
+            <div className="info-tickets">
                 <h3>Mesa Vip +25</h3>
                 <p>+ mas info</p>
                 <button className="tiket-bttn" onClick={openModal4}>COMPRAR</button>
@@ -64,7 +64,7 @@ const Info = () => {
                 </Modal>
             </div>
 
-            <div>
+            <div className="info-tickets">
                 <h3>Mesa Vip +30</h3>
                 <p>+ mas info</p>
                 <button className="tiket-bttn" onClick={openModal5}>COMPRAR</button>
