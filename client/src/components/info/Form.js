@@ -61,13 +61,6 @@ const Form = ({type}) => {
             [e.target.name]: e.target.value})
     }
 
-    function handleSelectChange(e) {
-        setInput({
-            ...input,
-            ticketType: e.target.value
-        })
-    }
-
     return (
         <div>
             <form onSubmit={handleSubmit}>
