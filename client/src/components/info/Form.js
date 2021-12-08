@@ -64,6 +64,7 @@ const Form = ({type}) => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
+                <p>Ingresa tus datos: </p>
                     <p>
                         <input 
                             type="text" 
@@ -120,7 +121,7 @@ const Form = ({type}) => {
                             />
                     </p>
 
-                    <button className="tiket-bttn"type='submit'><p>Enviar</p></button>
+                    <button className="tiket-bttn" type='submit'><p>Enviar</p></button>
                     
                 </form>
         </div>

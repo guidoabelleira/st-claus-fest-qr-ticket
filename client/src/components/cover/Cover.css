@@ -27,6 +27,13 @@
     color: #ffffff;
     font-size: 32px;
 }
+.cover-tiket-scroll {
+    height: 60px;
+    line-height: 60px;
+    color: #b06436;
+    cursor: pointer;
+    
+}
 
 @media screen and (max-width: 960px) {
     .cover-container > h1 {

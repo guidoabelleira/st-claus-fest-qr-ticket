@@ -17,6 +17,10 @@
     margin-top: 50px;
 }
 
+.info-container p {
+    font-size: 18px;
+}
+
 .tiket {
     flex-wrap: wrap;
     margin-top: 5px;
@@ -35,7 +39,7 @@
     height: 35px; 
     border:none;
     border-radius: 25px; 
-    margin-top: 2%;
+    margin-top: 10%;
     cursor: pointer;
 }
 
