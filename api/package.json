@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "api-stclaus",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,8 +7,8 @@
     "start": "nodemon -L",
     "test": "mocha -w ./tests/**/*.spec.js"
   },
-  "author": "Henry",
-  "license": "ISC",
+  "author": "TCAP DEV",
+  "license": "STCLAUSAPP",
   "engines": {
     "node": ">=12.18.3",
     "npm": ">=6.14.6"
@@ -24,6 +24,7 @@
     "mercadopago": "^1.5.9",
     "morgan": "^1.10.0",
     "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
     "pg": "^8.5.1",
     "qrcode": "^1.5.0",
     "sequelize": "^6.3.5"
@@ -31,7 +32,6 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^8.2.1",
-    "nodemon": "^2.0.6",
     "supertest": "^6.0.1",
     "supertest-session": "^4.1.0"
   }
