@@ -1,10 +1,8 @@
 const fs = require('fs');
 const qrcode = require('qrcode');
 
-const urlBase = 'http://localhost:3000/entradas/'
-
 const runQR = async (newTicket) => {
-    const QR = await qrcode.toDataURL(urlBase + newTicket.id);
+    const QR = await qrcode.toDataURL(newTicket.id);
     const htmlContent = `<!DOCTYPE html>
     <html lang="en">
     
@@ -30,7 +28,7 @@ const runQR = async (newTicket) => {
     </body>
     
     </html>`
-    fs.writeFileSync('./entrada.html', `${htmlContent}`)
+    fs.writeFileSync(`./ticketsHTML/entrada_${newTicket.id}.html`, `${htmlContent}`)
     console.log('Creando QR')
 }
 

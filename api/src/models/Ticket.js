@@ -43,6 +43,10 @@ module.exports = (sequelize) => {
       defaultValue: false,
       allowNull: false
     }, 
-
+    payment: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+      allowNull: false
+    }
   });
 };

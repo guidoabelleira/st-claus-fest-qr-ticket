@@ -14,65 +14,75 @@ const Info = () => {
     const [isOpenModal5, openModal5, closeModal5] = useModal(false);
 
     const typeTiket = {
-        type1: {ticketType: "General",
-        unit_price: 1000},
-        type2: {ticketType: "Entrada VIP +25",
-        unit_price: 2000},
-        type3: {ticketType: "Entrada VIP +30 Exclusivo",
-        unit_price: 3000},
-        type4: {ticketType: "Mesas VIP +25",
-        unit_price: 4000},
-        type5: {ticketType: "Mesas VIP +30",
-        unit_price: 5000},
+        type1: {
+            ticketType: "General",
+            unit_price: 1500
+        },
+        type2: {
+            ticketType: "Entrada VIP +25",
+            unit_price: 3000
+        },
+        type3: {
+            ticketType: "Entrada VIP +30 Exclusivo",
+            unit_price: 3500
+        },
+        type4: {
+            ticketType: "Mesas VIP +25",
+            unit_price: 70000
+        },
+        type5: {
+            ticketType: "Mesas VIP +30",
+            unit_price: 100000
+        },
     }
-    
+
     return (
         <div className="info-container">
             <div className="info-tickets">
                 <h3>Ticket General</h3>
-                <p>+ mas info</p>
+                <p>Precio: $1.500</p>
                 <button className="tiket-bttn" onClick={openModal1}>COMPRAR</button>
                 <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
-                    <Form type={typeTiket.type1}/>
+                    <Form type={typeTiket.type1} />
                 </Modal>
             </div>
 
             <div className="info-tickets">
                 <h3>Ticket Vip +25</h3>
-                <p>+ mas info</p>
+                <p>Precio: $3.000</p>
                 <button className="tiket-bttn" onClick={openModal2}>COMPRAR</button>
                 <Modal isOpen={isOpenModal2} closeModal={closeModal2}>
-                    <Form type={typeTiket.type2}/>
+                    <Form type={typeTiket.type2} />
                 </Modal>
             </div>
 
             <div className="info-tickets">
                 <h3>Ticket Vip +30 exclusivo</h3>
-                <p>+ mas info</p>
+                <p>Precio: $3.500</p>
                 <button className="tiket-bttn" onClick={openModal3}>COMPRAR</button>
                 <Modal isOpen={isOpenModal3} closeModal={closeModal3}>
-                    <Form type={typeTiket.type3}/>
+                    <Form type={typeTiket.type3} />
                 </Modal>
             </div>
 
             <div className="info-tickets">
                 <h3>Mesa Vip +25</h3>
-                <p>+ mas info</p>
+                <p>Precio: $70.000</p>
                 <button className="tiket-bttn" onClick={openModal4}>COMPRAR</button>
                 <Modal isOpen={isOpenModal4} closeModal={closeModal4}>
-                   <Form type={typeTiket.type4}/>
+                    <Form type={typeTiket.type4} />
                 </Modal>
             </div>
 
             <div className="info-tickets">
                 <h3>Mesa Vip +30</h3>
-                <p>+ mas info</p>
+                <p>Precio: $100.000</p>
                 <button className="tiket-bttn" onClick={openModal5}>COMPRAR</button>
                 <Modal isOpen={isOpenModal5} closeModal={closeModal5}>
-                   <Form type={typeTiket.type5}/>
+                    <Form type={typeTiket.type5} />
                 </Modal>
             </div>
-            
+
         </div>
     )
 }
