@@ -28,6 +28,8 @@ const Form = ({type}) => {
         console.log(bodyTicket)
         let resNewTicket = await axios.post('tickets/', bodyTicket);
         console.log("resNewTicket", resNewTicket )
+        let idTiket = resNewTicket.data.id;
+        window.localStorage.setItem('idTiket', idTiket)
 
         let bodyMercadoPago = {
             title: input.ticketType,

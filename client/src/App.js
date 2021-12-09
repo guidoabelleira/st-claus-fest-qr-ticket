@@ -1,31 +1,18 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
+import { Routes, Route} from "react-router-dom";
 import './App.css';
-import About from "./components/about/About";
-import Cover from "./components/cover/Cover";
-import Footer from "./components/footer/Footer";
-import Info from "./components/info/Info";
-import NavBar from './components/navBar/NavBar';
+
+import ConfirmPayment from "./components/confirmPayment/ConfirmPayment";
+import Home from "./components/home/Home";
 
 function App() {
 
-  const [scrollHeight, setScrollHeight] = useState(0);
-
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollHeight(position);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
-  }, [scrollHeight]);
-
   return (
     <div className="App">
-      <NavBar isScrolling={scrollHeight} />
-      <Cover />
-      <About />
-      <Info />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/confirmpayment" element={<ConfirmPayment />} />
+      </Routes>
     </div>
   );
 }
