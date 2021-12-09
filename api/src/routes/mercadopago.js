@@ -17,7 +17,7 @@ router.post("/", (req, res, next) => {
   let preference = {
     items: [],
     back_urls: {
-      success: "http://localhost:3000/", // /home
+      success: "http://localhost:3000/confirmpayment", // /home
       failure: "http://localhost:3000/home",
       pendind: "http://localhost:3000/home",
     },

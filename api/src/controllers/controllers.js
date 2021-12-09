@@ -1,4 +1,5 @@
 const { Ticket } = require('../db');
+const { htmlToPDF } = require('./htmlToPDF');
 const { confirmationMail } = require('./nodemailer')
 const { runQR } = require('./qr')
 
@@ -45,9 +46,9 @@ const createTicket = async (req, res, next) => {
             telephone,
             price
         });
-        confirmationMail(mail, name, lastname)
-        await runQR(newTicket)
-        res.status(200).send(newTicket)
+        await runQR(newTicket);
+        await htmlToPDF(newTicket);
+        res.status(200).send(newTicket);
     }
     catch (error) {
         console.log("Omar, algo anda mal!")
@@ -55,8 +56,53 @@ const createTicket = async (req, res, next) => {
     }
 }
 
+//////////////////////////////// PUT ////////////////////////////////
+
+const completeTicket = async (req, res, next) => {
+    const { id } = req.params;
+    let ticket = { payment: true };
+    try {
+
+        const thisTicket = await Ticket.findOne({
+            where: {
+                id: id
+            }
+        })
+        const updateTicket = await Ticket.update(ticket, {
+            where: {
+                id: id,
+            }
+        })
+
+        confirmationMail(thisTicket.name, thisTicket.lastname, thisTicket.mail, id)
+        res.status(200).send(true)
+    }
+    catch (error) {
+        next(error)
+    }
+}
+
+const checkTicket = async (req, res, next) => {
+    const { id } = req.params;
+    let ticket = req.body;
+    try {
+        const updateTicket = await Ticket.update(ticket, {
+            where: {
+                id: id,
+            }
+        })
+
+        res.status(200).send('Entrada canjeada!')
+    }
+    catch (error) {
+        next(error);
+    }
+}
+
 module.exports = {
     getAllTickets,
     getOneTicket,
-    createTicket
+    createTicket,
+    completeTicket,
+    checkTicket
 }
