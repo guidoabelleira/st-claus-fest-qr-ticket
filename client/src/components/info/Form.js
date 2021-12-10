@@ -38,7 +38,7 @@ const Form = ({type}) => {
         }
         let mercadoPagoRes = await axios.post('mercadopago/', bodyMercadoPago)
         // console.log(mercadoPagoRes)
-        window.open(mercadoPagoRes.data, '_blank')
+        window.location.replace(mercadoPagoRes.data)
         return
     };
 
