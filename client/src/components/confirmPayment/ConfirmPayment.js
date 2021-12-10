@@ -12,7 +12,7 @@ const ConfirmPayment = () => {
             let resValidate = await axios.put('tickets/' + idTiket);
             alert('Compra finalizada! Revisá tu casilla de correo electrónico.')
             window.location.assign('/')
-        // corregir url correcta
+        // corregir url correcta. ok
         } catch (error) {
             console.log(error);
         }

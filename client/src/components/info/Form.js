@@ -13,7 +13,7 @@ const Form = ({type}) => {
     });
 
     async function sendContact (input){
-        //Endpoint ---> http://localhost:3001/mercadopago/ ?
+        //Endpoint ---> http://localhost:3001/mercadopago/ ??
     
         // Por BODY necesito:
         let bodyTicket ={

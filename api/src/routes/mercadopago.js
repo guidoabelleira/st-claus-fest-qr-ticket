@@ -17,7 +17,7 @@ router.post("/", (req, res, next) => {
   let preference = {
     items: [],
     back_urls: {
-      success: process.env.BASE_URL + "/confirmpayment", // /home
+      success: process.env.BASE_URL + "/confirmpayment", // 
       failure: "/failure",
       pendind: "/pending",
     },
