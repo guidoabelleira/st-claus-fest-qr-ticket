@@ -1,5 +1,6 @@
 import React from 'react'
 import './ConfirmPayment.css'
+import axios from 'axios'
 
 const ConfirmPayment = () => {
 
@@ -8,9 +9,10 @@ const ConfirmPayment = () => {
             // tomo id de localstorage
             let idTiket = window.localStorage.getItem('idTiket');
             // parametros para confirmar idTiket y status true
-            // let resValidate = await axios.post('tickets/');
-            alert(idTiket)
-        // corregir url correcta
+            let resValidate = await axios.put('tickets/' + idTiket);
+            alert('Compra finalizada! Revisá tu casilla de correo electrónico.')
+            window.location.assign('/')
+        // corregir url correcta. ok
         } catch (error) {
             console.log(error);
         }
