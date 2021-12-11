@@ -50,6 +50,53 @@
 
 @media screen and (max-width: 660px) {
     .img {
+        width: 100%;
+        object-fit: fill;
+    }
+
+    .cover-tiket-scroll {
+        line-height: 280px;
+        font-size: 20px;
+    }
+}
+
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (width : 667px) 
+    and (height : 375px) 
+    and (orientation : landscape) 
+    and (color : 8)
+    and (device-aspect-ratio : 375/667)
+    and (aspect-ratio : 667/375)
+    and (device-pixel-ratio : 2)
+    and (-webkit-min-device-pixel-ratio : 2)
+{ 
+    .img {
+        width: 500px;
+        object-fit: fill;
+    }
+
+    .cover-tiket-scroll {
+        line-height: 280px;
+        font-size: 20px;
+    }
+}
+
+
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (width : 375px) 
+    and (height : 559px) 
+    and (orientation : portrait) 
+    and (color : 8)
+    and (device-aspect-ratio : 375/667)
+    and (aspect-ratio : 375/559)
+    and (device-pixel-ratio : 2)
+    and (-webkit-min-device-pixel-ratio : 2)
+{ 
+    .img {
         width: 500px;
         object-fit: fill;
     }
