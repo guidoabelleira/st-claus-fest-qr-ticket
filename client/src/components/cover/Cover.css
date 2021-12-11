@@ -1,12 +1,13 @@
 .cover-container {
     height: 100vh;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .img {
@@ -15,6 +16,7 @@
     height: 100vh;
     position: absolute;
     z-index: -1;
+    
 }
 
 .cover-container > h1 {
@@ -29,7 +31,7 @@
 }
 .cover-tiket-scroll {
     height: 60px;
-    line-height: 520px;
+    
     color: #b06436;
     cursor: pointer;
     font-size: 25px;
@@ -55,7 +57,7 @@
     }
 
     .cover-tiket-scroll {
-        line-height: 280px;
+        line-height: 320px;
         font-size: 20px;
     }
 }
@@ -78,7 +80,7 @@
     }
 
     .cover-tiket-scroll {
-        line-height: 280px;
+        line-height: 580px;
         font-size: 20px;
     }
 }
@@ -102,7 +104,44 @@
     }
 
     .cover-tiket-scroll {
-        line-height: 280px;
+        line-height: 580px;
+        font-size: 20px;
+    }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .cover-tiket-scroll {
+        line-height: 360px;
+        font-size: 20px;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .cover-tiket-scroll {
+        line-height: 360px;
+        font-size: 20px;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .cover-tiket-scroll {
+        line-height: 360px;
         font-size: 20px;
     }
 }

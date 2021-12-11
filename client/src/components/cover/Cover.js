@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Cover.css";
-import coverImg from "../../media/cover-imf.jpg";
+import coverImg from "../../media/cover-imh.jpeg";
 
 const Cover = () => {
     const toTheTop = () => {

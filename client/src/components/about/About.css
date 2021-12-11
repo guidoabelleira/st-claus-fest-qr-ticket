@@ -54,10 +54,83 @@
 
     .about-img {
         width: 100%;
-        margin-bottom: 50px;
+        margin: 10px 10px 10px 10px;
     }
 
-    .about-img > img {
-        width: 100%;
+    
+}
+
+@media screen and (max-width: 660px) {
+    .about-img {
+        margin: 10px 10px 10px 10ox;
+    }
+}
+
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (width : 667px) 
+    and (height : 375px) 
+    and (orientation : landscape) 
+    and (color : 8)
+    and (device-aspect-ratio : 375/667)
+    and (aspect-ratio : 667/375)
+    and (device-pixel-ratio : 2)
+    and (-webkit-min-device-pixel-ratio : 2)
+{ 
+    .about-img {
+        margin: 10px 10px 10px 10ox;
+    }
+}
+
+
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (width : 375px) 
+    and (height : 559px) 
+    and (orientation : portrait) 
+    and (color : 8)
+    and (device-aspect-ratio : 375/667)
+    and (aspect-ratio : 375/559)
+    and (device-pixel-ratio : 2)
+    and (-webkit-min-device-pixel-ratio : 2)
+{ 
+    .about-img {
+        margin: 10px 10px 10px 10ox;
+    }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .about-img {
+        margin: 10px 10px 10px 10ox;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .about-img {
+        margin: 10px 10px 10px 10ox;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .about-img {
+        margin: 10px 10px 10px 10ox;
     }
 }
