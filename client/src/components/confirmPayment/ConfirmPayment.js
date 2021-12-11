@@ -9,7 +9,7 @@ const ConfirmPayment = () => {
             // tomo id de localstorage
             let idTiket = window.localStorage.getItem('idTiket');
             // parametros para confirmar idTiket y status true
-            let resValidate = await axios.put('tickets/' + idTiket);
+            await axios.put('tickets/' + idTiket);
             alert('Compra finalizada! Revisá tu casilla de correo electrónico.')
             window.location.assign('/')
         // corregir url correcta. ok

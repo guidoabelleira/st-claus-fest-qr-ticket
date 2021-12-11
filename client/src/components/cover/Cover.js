@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Cover.css";
-import coverImg from "../../media/cover-img.jpg";
+import coverImg from "../../media/cover-imf.jpg";
 
 const Cover = () => {
     const toTheTop = () => {
@@ -10,8 +10,6 @@ const Cover = () => {
     return (
         <div className="cover-container">
             <img className="img" src={coverImg} alt=""/>
-            <h1>St Claus</h1>
-            <p>24 Diciembre 2021</p>
             <div className="cover-tiket-scroll" onClick={toTheTop}>Compra tu entrada!</div>
         </div>
     )

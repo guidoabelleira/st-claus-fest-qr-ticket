@@ -29,10 +29,10 @@
 }
 .cover-tiket-scroll {
     height: 60px;
-    line-height: 60px;
+    line-height: 320px;
     color: #b06436;
     cursor: pointer;
-    
+    font-size: 25px;
 }
 
 @media screen and (max-width: 960px) {
@@ -45,5 +45,17 @@
         text-align: center;
         font-size: 22px;
         width: 85%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .img {
+        width: 500px;
+        object-fit: fill;
+    }
+
+    .cover-tiket-scroll {
+        line-height: 280px;
+        font-size: 20px;
     }
 }
