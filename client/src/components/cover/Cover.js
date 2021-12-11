@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Cover.css";
-import coverImg from "../../media/cover-imh.jpeg";
+import coverImg from "../../media/cover-img.jpg";
 
 const Cover = () => {
     const toTheTop = () => {
@@ -10,7 +10,8 @@ const Cover = () => {
     return (
         <div className="cover-container">
             <img className="img" src={coverImg} alt=""/>
-            <div className="cover-tiket-scroll" onClick={toTheTop}>Compra tu entrada!</div>
+            <h1>ST CLAUS</h1>
+            <div className="cover-tiket-scroll" onClick={toTheTop}>ADQUIRÍ TU ENTRADA!</div>
         </div>
     )
 }
