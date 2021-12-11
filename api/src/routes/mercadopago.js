@@ -18,8 +18,8 @@ router.post("/", (req, res, next) => {
     items: [],
     back_urls: {
       success: process.env.BASE_URL + "/confirmpayment", // 
-      failure: "/failure",
-      pendind: "/pending",
+      failure: "/failurepayment",
+      pendind: "/failurepayment",
     },
     auto_return: "all",
   };

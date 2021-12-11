@@ -1,0 +1,28 @@
+.failurePayment-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 20px;
+}
+
+.failurePayment-container h3 {
+    font-size: 25px;
+}
+
+.failurePayment-bttn {
+    background-color: #b06436;
+    color:white;
+    width: 200px;
+    height: 50px; 
+    border:none;
+    border-radius: 25px; 
+    margin-top: 8%;
+    cursor: pointer;
+}
+
+.failurePayment-bttn:hover{
+    background-color:rgb(166, 168, 166);
+    transition-duration: 0.5s;
+}

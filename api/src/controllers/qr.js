@@ -3,28 +3,17 @@ const qrcode = require('qrcode');
 
 const runQR = async (newTicket) => {
     const QR = await qrcode.toDataURL(newTicket.id);
-    const htmlContent = `<!DOCTYPE html>
-    <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js'></script>
-        <script src="script.js"></script>
-    </head>
-    
+    const htmlContent = `    
     <body>
-        <div id='body'>
-            <p>Hola ${newTicket.name} ${newTicket.lastname}</p>
-            <p></p>
-            <p>Este es el ticket ${newTicket.id}</p>
-            <hr>
-            </hr>
-            <img src="${QR}"> </img>
+    <div id='body' style="text-align: center; border: solid; border-color: #b06436; border-radius: 10px; height: 350px; width: 500px; background-image: url('/client/src/media/1\ noche.jpg'">
+        <h1><span style="color: #b06436;">ENTRADA ST-CLAUS 2021</span></h1>
+        <h3><span style="color: #b06436;">TE ESPERAMOS</span></h3>
+        <p></p>
+        <img src="${QR}"> </img>
+        <blockquote>
+            <p>Record&aacute; mostrar el c&oacute;digo QR en la entrada junto con tu DNI para acceder a la mejor fiesta de C&oacute;rdoba!</p>
+        </blockquote>
         </div>
-        <button onclick="generatePDF()">Descargar entrada</button>
     </body>
     
     </html>`

@@ -1,5 +1,6 @@
 {
   "name": "st-claus-app",
+  "homepage": "http://stclauscordoba.online/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
