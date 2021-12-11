@@ -5,8 +5,8 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-contact">
-                <h3>Puntos de</h3>
-                <p>micros</p>
+                <h3>Salidas de Micros</h3>
+                <p>Próximamente... </p>
             </div>
             <div className="footer-sns">
                 <div className="desing-by">
