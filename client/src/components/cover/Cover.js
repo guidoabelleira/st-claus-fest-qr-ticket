@@ -11,6 +11,7 @@ const Cover = () => {
         <div className="cover-container">
             <img className="img" src={coverImg} alt=""/>
             <h1>ST CLAUS</h1>
+            <p>24 DICIEMBRE 2021</p>
             <div className="cover-tiket-scroll" onClick={toTheTop}>ADQUIRÍ TU ENTRADA!</div>
         </div>
     )

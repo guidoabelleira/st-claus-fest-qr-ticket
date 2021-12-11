@@ -88,7 +88,7 @@ const Info = () => {
             </div>
 
             <div className="info-tickets">
-                <h3>MESA VIP +30</h3>
+                <h3>MESA VIP +30 EXCLUSIVO</h3>
                 <p>PRECIO: $100.000</p>
                 <button className="tiket-bttn" onClick={openModal5}>COMPRAR</button>
                 <Modal isOpen={isOpenModal5} closeModal={closeModal5}>
